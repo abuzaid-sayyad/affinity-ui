@@ -1,0 +1,586 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Thin.ttf);
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Light.ttf);
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Black.ttf);
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    max-width: 1526px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
+header{
+    background: #000;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    width: 170px;
+    height: auto;
+}
+header ul{
+    list-style: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #fff;
+    padding: 36px 0;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+header ul li{
+    padding: 0 33px 24px;
+}
+header ul li a{
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+}
+header ul li a span{
+    background-image: url(images/down_arrow_icon.png);
+    width: 14px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    filter: invert(100%);
+    -webkit-filter: invert(1);
+    -moz-filter: invert(100%);
+   -o-filter: invert(100%);
+   -ms-filter: invert(100%);
+    opacity: 0.9;
+}
+header .dropdown{
+    background-color: #ffffff;
+    padding: 18px;
+    position: static;
+    top: 42px;
+    right: 24px;
+    border-radius: 10px;
+    width: 248px;
+    display: none;
+}
+header .dropdown ul{
+    display: block;
+    list-style-type: none;
+    height: auto;
+    width: auto;
+    position: static;
+    background-color: #fff;
+    padding: 0;
+}
+header .dropdown ul li{
+    padding: 0;
+}
+header .dropdown ul li a{
+    color: #333333;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 0;
+    display: inline-block;
+}
+header .menu{
+    cursor: pointer;
+    background: #fff;
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+header .menu span{
+    background-image: url(images/menu.png);
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+header .burger-navbar.active{
+    left: 0;
+}
+header .close-menu{
+    font-size: 28px;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: -24px;
+    right: 20px;
+    cursor: pointer;
+}
+.relative{
+    position: relative;
+}
+.hero-banner{
+    width: 100%;
+    height: auto;
+}
+.hero-banner img{
+    width: 100%;
+    height: auto;
+}
+.icon-pointer{
+    padding: 28px 0;
+}
+.icon-pointer h1{
+    font-size: 20px;
+    line-height: 30px;
+    color: #333333;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.icon-pointer .img-widget{
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+.icon-pointer .img-widget img{
+    width: 60px;
+    height: auto;
+}
+.left-right-widget{
+    padding: 16px 0;
+}
+.left-right-widget h2{
+    font-size: 20px;
+    line-height: 30px;
+    color: #333333;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.left-right-widget .flex-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.left-right-widget .flex-container .w-50{
+    width: 100%;
+    text-align: center;
+}
+.left-right-widget .flex-container .w-50.order-last{
+    order: 9999;
+}
+.left-right-widget .flex-container .w-50 img{
+    width: 200px;
+    height: auto;
+}
+.left-right-widget .flex-container .w-50 p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+.tab-center{
+    margin-bottom: 56px;
+}
+.tab-center .border-box {
+    width: 100%;
+    border: 1px solid #cccccc; 
+    background: #ffffff;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 0 9.5px 0.5px #c1bebe;
+    -moz-box-shadow: 0 0 9.5px 0.5px #c1bebe;
+    box-shadow: 0 0 9.5px 0.5px #c1bebe; /*drop shadow*/
+}
+.tab-center .border-box p{
+    padding: 14px 20px 20px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    font-weight: 400;
+}
+.tab-center ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.tab-center ul li{
+    padding: 8px 20px;
+    background-color: #dddddd;
+    border: 0px solid #000000;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
+    font-weight: 400;
+    cursor: pointer;
+}
+.tab-center ul.tabs li.current{
+    background-color: #e12323;
+    color: #ffffff;
+}
+.tab-center .tab-content{
+    display: none;
+}
+.tab-center .tab-content.current{
+    display: block;
+}
+footer {
+    text-align: center;
+    padding: 38px 0;
+    border-top: 1px solid #000000;
+    background: #000000;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+footer button{
+    width: 230px;
+    min-height: 44px;
+    border-radius: 37px;
+    background-color: #ed3155;
+    border: 1px solid #000000;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 20px;
+    cursor: pointer;
+}
+footer .mb-61px{
+    margin-bottom: 20px;
+}
+footer .hyper-links{
+    margin-bottom: 20px;
+}
+footer .hyper-links a{
+    font-size: 14px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+footer .hyper-links span{
+    font-size: 14px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 400;
+    display: inline-block;
+    margin: 0 10px;
+}
+footer .logo{
+    width: 140px;
+    height: auto;
+}
+@media only screen and (min-width: 768px) {
+    .container{
+        max-width: 610px;
+    }
+    header{
+        padding: 16px 20px;
+    }
+    header .logo{
+        width: 208px;
+    }
+    header ul{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        height: auto;
+        width: auto;
+        position: static;
+        background-color: transparent;
+        padding: 0; 
+    }
+    header ul li{
+        padding: 0 18px;
+    }
+    header ul li a{
+        color: #fff;
+        font-weight: 700;
+        font-size: 20px;
+    }
+    header ul li a span{
+        width: 16px;
+        height: 12px;
+        filter: none;
+        -webkit-filter: none;
+    }
+    header .dropdown{
+        padding: 20px;
+        position: absolute;
+        top: 42px;
+        right: 24px;
+    }
+    header .dropdown ul li a{
+        font-size: 18px;
+        padding: 20px 0;
+    }
+    header .menu{
+        display: none;
+    }
+    header .close-menu{
+        display: none;
+    }
+    .icon-pointer .img-widget{
+        justify-content: space-between;
+    }
+    .icon-pointer .img-widget img{
+        width: 80px;
+        height: auto;
+    }
+    .left-right-widget .flex-container{
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 40px;
+        gap: 20px;
+    }
+    .left-right-widget .flex-container .w-50{
+        width: 50%;
+        text-align: left;
+    }
+    .left-right-widget .flex-container .w-50.order-last{
+        order: -9999;
+    }
+    .left-right-widget .flex-container .w-50 img{
+        width: 250px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .container{
+        max-width: 1060px;
+    }
+    header ul li{
+        padding: 0 33px;
+    }
+    .icon-pointer{
+        padding: 50px 0;
+    }
+    .icon-pointer h1{
+        font-size: 34px;
+        line-height: 48px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    .icon-pointer .img-widget img{
+        width: 80px;
+    }
+    .left-right-widget{
+        padding: 40px 0;
+    }
+    .left-right-widget h2{
+        font-size: 34px;
+        line-height: 48px;
+        margin-bottom: 40px;
+    }
+    .left-right-widget .flex-container{
+        gap: 78px;
+        margin-bottom: 80px;
+    }
+    .left-right-widget .flex-container .w-50 img{
+        width: 100%;
+    }
+    .left-right-widget .flex-container .w-50 p{
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 0;
+    }
+    .tab-center{
+        margin-bottom: 190px;
+    }
+    .tab-center .border-box p{
+        padding: 44px 54px 48px;
+        font-size: 32px;
+        line-height: 56px;
+    }
+    .tab-center ul li{
+        padding: 25px 76px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+    footer {
+        padding: 42px 0 48px;
+    }
+    footer button{
+        width: 314px;
+        min-height: 53px;
+        padding: 0;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 53px;
+    }
+    footer .mb-61px{
+        margin-bottom: 30px;
+    }
+    footer .hyper-links{
+        margin-bottom: 26px;
+    }
+    footer .hyper-links a{
+        font-size: 24px;
+        line-height: 42px;
+        margin: 0 18px;
+    }
+    footer .hyper-links span{
+        font-size: 24px;
+        line-height: 42px;
+        margin: 0 18px;
+    }
+    footer .logo{
+        width: 240px;
+    }
+}
+@media only screen and (min-width: 1826px) {
+    .container{
+        max-width: 1526px;
+    }
+    header{
+        padding: 28px 44px;
+    }
+    header .logo{
+        width: 274px;
+    }
+    header ul li a{
+        font-size: 30px;
+    }
+    header .dropdown ul{
+        display: block;
+        list-style-type: none;
+    }
+    header .dropdown ul li a{
+        font-size: 24px;
+    }
+    .icon-pointer{
+        padding: 86px 0;
+    }
+    .icon-pointer h1{
+        font-size: 48px;
+        line-height: 68px;
+        margin-bottom: 54px;
+    }
+    .icon-pointer .img-widget{
+        max-width: 1420px;
+    }
+
+    .icon-pointer .img-widget img{
+        width: 110px;
+    }
+    .left-right-widget{
+        padding: 54px 0;
+    }
+    .left-right-widget h2{
+        font-size: 48px;
+        line-height: 68px;
+        margin-bottom: 78px;
+    }
+    .left-right-widget .flex-container{
+        gap: 176px;
+        margin-bottom: 154px;
+    }
+    .left-right-widget .flex-container .w-50 p{
+        font-size: 36px;
+        line-height: 68px;
+    }
+    .tab-center{
+        margin-bottom: 380px;
+    }
+    .tab-center .border-box p{
+        padding: 56px 85px 83px;
+        font-size: 45px;
+        line-height: 90px;
+    }
+    .tab-center ul li{
+        padding: 40px 114px;
+        font-size: 67px;
+        line-height: 70px;
+    }
+    footer {
+        padding: 51px 0 68px;
+    }
+    footer button{
+        width: 390px;
+        min-height: 74px;
+        font-size: 36px;
+        line-height: 75px;
+    }
+    footer .mb-61px{
+        margin-bottom: 61px;
+    }
+    footer .hyper-links{
+        margin-bottom: 60px;
+    }
+    footer .hyper-links a{
+        font-size: 36px;
+        line-height: 68px;
+        margin: 0 32px;
+    }
+    footer .hyper-links span{
+        font-size: 36px;
+        line-height: 68px;
+        margin: 0 32px;
+    }
+    footer .logo{
+        width: 300px;
+    }
+}
